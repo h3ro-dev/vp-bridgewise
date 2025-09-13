@@ -27,6 +27,16 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        "executive-red": {
+          DEFAULT: "hsl(var(--executive-red))",
+          foreground: "hsl(var(--executive-red-foreground))",
+        },
+        "leadership-gold": {
+          DEFAULT: "hsl(var(--leadership-gold))",
+          foreground: "hsl(var(--leadership-gold-foreground))",
+        },
+        "pressure-dark": "hsl(var(--pressure-dark))",
+        "isolation-grey": "hsl(var(--isolation-grey))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -62,6 +72,17 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-executive": "var(--gradient-executive)",
+        "gradient-pressure": "var(--gradient-pressure)", 
+        "gradient-leadership": "var(--gradient-leadership)",
+        "gradient-authority": "var(--gradient-authority)",
+      },
+      boxShadow: {
+        "executive": "var(--shadow-executive)",
+        "authority": "var(--shadow-authority)",
+        "leadership": "var(--shadow-leadership)",
       },
       keyframes: {
         "accordion-down": {

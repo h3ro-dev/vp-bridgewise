@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* VP of One Executive Design System - Sophisticated leadership aesthetic */
 
 @layer base {
   :root {
@@ -17,72 +15,100 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Executive Color Palette */
+    --primary: 231 15% 18%; /* #2B2D42 - Executive Navy */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 215 28% 17%; /* Sophisticated Slate */
+    --secondary-foreground: 0 0% 100%;
+
+    --executive-red: 350 100% 28%; /* #8D0801 - Authority Red */
+    --executive-red-foreground: 0 0% 100%;
+
+    --leadership-gold: 45 100% 51%; /* Leadership Accent */
+    --leadership-gold-foreground: 231 15% 18%;
+
+    --pressure-dark: 231 21% 14%; /* Deeper executive */
+    --isolation-grey: 218 11% 65%; /* Leadership loneliness */
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 231 15% 18%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 231 15% 18%;
+
+    /* Executive Gradients */
+    --gradient-executive: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--executive-red)));
+    --gradient-pressure: linear-gradient(180deg, hsl(var(--pressure-dark)), hsl(var(--primary)));
+    --gradient-leadership: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--leadership-gold) / 0.2));
+    --gradient-authority: linear-gradient(90deg, hsl(var(--executive-red) / 0.1), hsl(var(--primary) / 0.1));
+
+    /* Executive Shadows */
+    --shadow-executive: 0 25px 50px -12px hsl(var(--primary) / 0.4);
+    --shadow-authority: 0 20px 40px -10px hsl(var(--executive-red) / 0.3);
+    --shadow-leadership: 0 10px 30px -5px hsl(var(--leadership-gold) / 0.2);
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Executive Transitions */
+    --transition-executive: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-authority: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 231 21% 14%;
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 231 15% 18%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 231 15% 18%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 231 15% 18%;
 
     --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 0 0% 100%;
+
+    --executive-red: 350 100% 35%;
+    --executive-red-foreground: 0 0% 100%;
+
+    --leadership-gold: 45 100% 60%;
+    --leadership-gold-foreground: 231 15% 18%;
+
+    --pressure-dark: 231 25% 10%;
+    --isolation-grey: 218 11% 45%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 231 15% 18%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -91,6 +117,12 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Executive gradients remain consistent */
+    --gradient-executive: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--executive-red)));
+    --gradient-pressure: linear-gradient(180deg, hsl(var(--pressure-dark)), hsl(var(--primary)));
+    --gradient-leadership: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--leadership-gold) / 0.2));
+    --gradient-authority: linear-gradient(90deg, hsl(var(--executive-red) / 0.1), hsl(var(--primary) / 0.1));
   }
 }
 
@@ -101,5 +133,19 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  /* Executive-specific styling */
+  .executive-text {
+    @apply text-primary font-semibold tracking-tight;
+  }
+  
+  .leadership-accent {
+    @apply text-leadership-gold font-medium;
+  }
+  
+  .pressure-indicator {
+    @apply text-executive-red font-bold;
   }
 }
